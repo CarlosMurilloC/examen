@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../cards.css">
+    <script src="../app.js" defer></script>
+    <title>Productos</title>
+</head>
+<body>
+
+    <header>    
+        <div class="tittle">
+            <h1>Tienda</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="home.html">Inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<div class="container">
+    <template id="product-template">
+        <div class="product-card">
+            <img src="" alt="Producto" class="product-image">
+            <h2 class="product-title"></h2>
+            <p class="product-description"></p>
+            <span class="product-price"></span>
+            <div class="product-actions">
+                <button class="like-button">❤️ Favorito</button>
+                <button class="cart-button">🛒 Añadir al carrito</button>
+            </div>
+        </div>
+    </template>
+</div>
+
+
+<div style="text-align: center; margin-top: 2rem;">
+    <button id="checkout-button" style="padding: 1rem 2rem; font-size: 1rem; background-color: #e67e22; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        🛒 Proceder a la Compra
+    </button>
+    <button id="view-cart-button" style="padding: 1rem 2rem; font-size: 1rem; background-color: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Ver Carrito
+    </button>
+    <button id="view-favorites-button" style="padding: 1rem 2rem; font-size: 1rem; background-color: #e74c3c; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Ver Favoritos
+    </button>
+</div>
+
+
+<dialog id="cookie-dialog">
+    <p>Este sitio utiliza cookies para mejorar tu experiencia. Al continuar, aceptas el uso de cookies.</p>
+    <button id="accept-cookies">Aceptar</button>
+</dialog>
+
+
+<div id="cart-container" style="display:none;">
+    <h2>Carrito de Compras</h2>
+    <div class="cart-list"></div>
+    <button id="proceed-checkout" style="padding: 1rem 2rem; font-size: 1rem; background-color: #e67e22; color: white; border: none; border-radius: 5px; cursor: pointer;">Confirmar Compra</button>
+    <button id="close-cart" style="padding: 1rem 2rem; font-size: 1rem; background-color: #ccc; color: white; border: none; border-radius: 5px; cursor: pointer;">Cerrar Carrito</button>
+</div>
+
+
+<div id="favorites-container" style="display:none;">
+    <h2>Favoritos</h2>
+    <div class="favorites-list"></div>
+    <button id="close-favorites" style="padding: 1rem 2rem; font-size: 1rem; background-color: #ccc; color: white; border: none; border-radius: 5px; cursor: pointer;">Cerrar Favoritos</button>
+</div>
+
+</body>
+</html>

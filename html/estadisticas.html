@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estadísticas de eventos musicales">
+    <link rel="stylesheet" href="../tarea1.css">
+    <title>Estadísticas</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="pastel-background"></div>
+
+    <header class="pastel-header">
+        <div class="container">
+            <h1>📊 Estadísticas de Asistencia</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="../html/home.html" class="pastel-link">🏠 Inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="statistics pastel-container">
+            <h2>Revisa la asistencia estimada</h2>
+            <p class="grafica">🎶 Gráfico con las proyecciones para los próximos eventos musicales:</p>
+            <canvas id="estadisticasChart"></canvas>
+        </section>
+    </main>
+
+    <footer class="pastel-footer">
+        <div class="container">
+            <p>© 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const ctx = document.getElementById('estadisticasChart').getContext('2d');
+        const data = {
+            labels: ['Festival Electrónica', 'Festival Urbana', 'Concierto Rock Clásico'],
+            datasets: [{
+                label: 'Asistencia Estimada',
+                data: [5000, 7500, 6000],
+                backgroundColor: [
+                    'rgba(255, 183, 178, 0.8)',
+                    'rgba(255, 223, 186, 0.8)',
+                    'rgba(186, 225, 255, 0.8)'
+                ],
+                borderColor: [
+                    'rgba(255, 112, 112, 1)',
+                    'rgba(255, 191, 112, 1)',
+                    'rgba(112, 181, 255, 1)'
+                ],
+                borderWidth: 2,
+                hoverBackgroundColor: [
+                    'rgba(255, 183, 178, 1)',
+                    'rgba(255, 223, 186, 1)',
+                    'rgba(186, 225, 255, 1)'
+                ],
+            }]
+        };
+
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Asistencia Estimada por Evento 🎉',
+                        color: '#555',
+                        font: {
+                            size: 18,
+                            family: 'Quicksand, sans-serif'
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            color: '#555',
+                            font: {
+                                family: 'Quicksand, sans-serif',
+                                size: 14
+                            }
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: '#555',
+                            font: {
+                                family: 'Quicksand, sans-serif',
+                                size: 14
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        new Chart(ctx, config);
+    </script>
+</body>
+
+</html>
