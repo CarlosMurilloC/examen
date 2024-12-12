@@ -16,9 +16,9 @@
     const favorites = [];
 
     const productos = [
-        { id: 1, imagen: "../images/camiseta.jpg", titulo: "Camiseta", descripcion: "Camiseta de algodón 100%.", precio: "10.00€" },
-        { id: 2, imagen: "../images/pantalon.jpg", titulo: "Pantalón", descripcion: "Perfecto para cualquier ocasión.", precio: "20.00€" },
-        { id: 3, imagen: "../images/zapatillas.jpg", titulo: "Zapatillas", descripcion: "Deportivas y cómodas.", precio: "30.00€" }
+        { id: 1, imagen: "../images/cartelera.jpg", titulo: "cartelera", descripcion: "ENTRADA FESTIVALES PLAYEROS.", precio: "40.00€" },
+        { id: 2, imagen: "../images/ticket.jpg", titulo: "ticket", descripcion: "ENTRADA GENERAL.", precio: "20.00€" },
+        { id: 3, imagen: "../images/vip.jpg", titulo: "vip", descripcion: "ENTRADA ZONA VIP.", precio: "60.00€" }
     ];
 
 
