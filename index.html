@@ -3,10 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto Lenguaje de Marcas 1 Evaluacion.">
+    <meta name="keywords" content="Lenguaje de Marcas DiseñoWEB">
+    <meta name="author" content="Carlos Murillo Cuenca - 2º DAW">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Proyecto 1 Carlos Murillo Cuenca">
+    <meta property="og:description" content="Web que ofrece Información sobre festivales.">
+    <meta property="og:image" content="/images/imagen1.jpg">
+    <meta property="og:url" content=" https://carlosmurilloc.github.io/examen/">
+
+    <meta name="robots" content="noindex" />
+    <meta name="googlebot" content="noindex" />
+    <meta name="googlebot-news" content="noindex" />
+    <meta name="slurp" content="noindex" />
+    <meta name="msnbot" content="noindex"/>
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <dialog id="cookie-dialog">
+        <p>Este sitio utiliza cookies para mejorar tu experiencia. Al continuar, aceptas el uso de cookies.</p>
+        <button id="accept-cookies">Aceptar</button>
+    </dialog>
+    
+
+
     <div class="form-container">
         <header>
             <h1>Iniciar Sesión</h1>
@@ -54,6 +77,21 @@
                 alert(`Error al iniciar sesión: ${error.message}`);
             }
         });
+
+
+        const cookieDialog = document.getElementById("cookie-dialog");
+    const acceptCookiesButton = document.getElementById("accept-cookies");
+
+    if (!localStorage.getItem("cookiesAccepted")) {
+        cookieDialog.showModal();
+    }
+
+    acceptCookiesButton.addEventListener("click", () => {
+        localStorage.setItem("cookiesAccepted", "true");
+        cookieDialog.close();
+    });
+
+
     </script>
 </body>
 </html>
