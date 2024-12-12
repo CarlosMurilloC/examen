@@ -20,22 +20,17 @@
     <meta name="msnbot" content="noindex"/>
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cards.css">
 </head>
 <body>
 
-    <dialog id="cookie-dialog">
-        <p>Este sitio utiliza cookies para mejorar tu experiencia. Al continuar, aceptas el uso de cookies.</p>
-        <button id="accept-cookies">Aceptar</button>
-    </dialog>
-    
-
-
     <div class="form-container">
-        <header>
+        <header>           
             <h1>Iniciar Sesión</h1>
             <a href="./html/register.html" class="register-link">¿No tienes cuenta? Regístrate</a>
         </header>
 
+     
         <form id="loginForm">
             <label for="email">Correo electrónico:</label>
             <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
@@ -45,6 +40,11 @@
 
             <button type="submit">Iniciar Sesión</button>
         </form>
+        <dialog id="cookie-dialog">
+            <p>Este sitio utiliza cookies para mejorar tu experiencia. Al continuar, aceptas el uso de cookies.</p>
+            <button id="accept-cookies">Aceptar</button>
+        </dialog>
+
     </div>
 
     <script type="module">

@@ -222,8 +222,6 @@ button:hover {
 #close-cart:hover, #close-favorites:hover {
   background-color: #bbb;
 }
-
-
 #cookie-dialog {
   border: none;
   border-radius: 10px;
@@ -231,6 +229,7 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
   position: fixed;
+  margin: auto;
   bottom: 20px;
   right: 20px;
   width: 300px;
